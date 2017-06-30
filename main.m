@@ -11,3 +11,8 @@ HSV_img = rgb2hsv(RGB_img);
 
 divisions = 4;
 divided = subdivide_image(RGB_img, divisions);
+
+idx = 1;
+subimage = divided{idx};
+
+histograma3d = hist3d(subimage);

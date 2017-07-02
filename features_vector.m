@@ -27,8 +27,8 @@ for image_cells_idx=1: n_subimages;
 
     % Cálculo de histograma 3D y normalización
     histograma3d = hist3d(subimage);
-    hist_mean = mean(histograma3d(:));
-    normalized_hist = (histograma3d/hist_mean);
+    hist_sum = sum(histograma3d(:));
+    normalized_hist = (histograma3d/hist_sum); %% NORMALIZACION SE CONSIDERA QUE LA SUMA SEA 1
 
     % Concatenación
     if (image_cells_idx==1)

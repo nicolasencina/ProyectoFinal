@@ -12,6 +12,8 @@ n_database = length(database_images);
 filenames = {'features1','features2','features3','features4'};
 
 for metodo=1:4
+    display('METODO METODO METODO METODO METODO METODO METODO METODO METODO METODO ')
+    display(metodo)
     database_features = cell(n_database-2, 1);
     for k=3:n_database
         % Leer imagen y convertir a espacio HSV

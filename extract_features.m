@@ -20,8 +20,7 @@ for metodo=1:4
         % Leer imagen y convertir a espacio HSV
         image_idx = k;
         RGB_img = image_read(database, database_images, image_idx);
-        method = 1;  % De 1 a 3 por el momento, 4 se demora mucho
-        database_features{k-2} = features_vector(RGB_img, method);
+        database_features{k-2} = features_vector(RGB_img, metodo);
         display(k)
     end
     save(filenames{metodo}, 'database_features')

@@ -13,17 +13,18 @@ n_database = length(database_images);
 filenames = {'features1','features2','features3','features4'};
 
 for metodo=1:4
-    display('METODO METODO METODO METODO METODO METODO METODO METODO METODO METODO ')
+    display('Metodo:')
     display(metodo)
+    tic;
     database_features = cell(n_database-2, 1);
     for k=3:n_database
         % Leer imagen y convertir a espacio HSV
         image_idx = k;
         RGB_img = image_read(database, database_images, image_idx);
         database_features{k-2} = features_vector(RGB_img, metodo);
-        display(k)
     end
     save(filenames{metodo}, 'database_features')
+    toc;
 end
 
 

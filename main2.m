@@ -19,27 +19,7 @@ query_images = direcciones(pc_name, folder , query_database);
 n_query = length(query_info);
 
 
-for k=11:11
-    RGB_img = image_read_v2(query_database,query_info(k).name);
-    %method = 1;  %Definido al principio
-    query_features = features_vector(RGB_img, method);
+for k=24:24
+   image_name = query_info(k).name;
+   consult_image(image_name, database_1, method, image_database, database_info)
 end
-
-
-n_img_database = length(database_1);
-distances = zeros(n_img_database, 1);
-for j=1:n_img_database
-    first_image = database_1{j};
-    dist = chisquare_distance(query_features, first_image);
-    distances(j) = dist;
-end
-
-[B,I] = sort(distances);
-
-best_images = cell(9,1);
-for i=1:9
-    index = I(i);
-    best_images{i} = image_read_v2(image_database,database_info(index).name);
-end
-
-splot(3,3,best_images)

@@ -20,6 +20,4 @@ binsV = 3;
 
 [output , ~, ~, ~] = histcn(data, (binsH-1) , (binsS-1), (binsV-1));
 
-
-
 end

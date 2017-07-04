@@ -6,6 +6,7 @@ folder = 'ProyectoFinal';
 database = 'img_database';
 database_images = direcciones(pc_name, folder , database);
 
+
 % Creación de vectores de caracteriticas de la base de datos para los 4
 % metodos
 n_database = length(database_images);

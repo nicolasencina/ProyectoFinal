@@ -2,7 +2,7 @@ clear all
 filenames = {'features1','features2','features3','features4'};
 
 % Extraccion de datos de base de datos usando metodo 1
-method = 2;
+method = 1;
 database = load(filenames{method});
 database_1 = database.database_features;
 
@@ -21,7 +21,9 @@ query_info = images_info(pc_name, folder, query_database);
 n_query = length(query_info);
 
 
-for k=24:24
+for k=1:1
    image_name = query_info(k).name;
-   consult_image(image_name, database_1, method, image_database, database_info)
+   image_class = query_info(k).class;
+   
+   rank = consult_image(image_name, image_class, database_1, method, image_database, database_info);
 end

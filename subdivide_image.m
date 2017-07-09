@@ -43,6 +43,7 @@ else
     mask5 = circ;
     
     output = cell(5,1);
+        
     output{1} = apply_mask(image, mask1);
     output{2} = apply_mask(image, mask2);
     output{3} = apply_mask(image, mask3);

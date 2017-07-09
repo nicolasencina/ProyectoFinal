@@ -1,4 +1,4 @@
-function [rank] = consult_image_v2(image_index, image_class, features_database, features_query, image_database, database_info)
+function [rank, N_rel] = consult_image_v2(image_index, image_class, features_database, features_query, image_database, database_info)
 
 query_features = features_query{image_index};
 

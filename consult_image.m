@@ -11,7 +11,9 @@ for j=1:n_img_database
     distances(j) = dist;
 end
 
-[B,I] = sort(distances);
+[B,I] = sort(distances)
+
+DISTANCIAS = B'
 
 Ri_sum = 0;
 N_rel = 0;

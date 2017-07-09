@@ -1,8 +1,8 @@
-clear all
-filenames = {'features1','features2','features3','features4'};
+%filenames = {'features1','features2','features3','features4'};
+filenames = {'features1_g','features2_g','features3_g','features4_g'};
 
 % Extraccion de datos de base de datos usando metodo 1
-method = 1;
+method = 2;
 database = load(filenames{method});
 database_1 = database.database_features;
 
